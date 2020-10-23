@@ -1,6 +1,4 @@
-// file I/O to read in pokemon name list
-// for each pokemon name, get their types from pokeapi.co
-// console.log it all
+#!/usr/bin/env node
 
 const fs = require('fs');
 const fetch = require('node-fetch');
