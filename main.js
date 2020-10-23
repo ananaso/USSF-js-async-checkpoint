@@ -11,12 +11,8 @@ let types = [];
 names.forEach(pokemon => {
     types.push(fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then(response => response.json())
-    .then(data => data.types.map(slot => {
-        return slot.type.name;
-    }))
-    .then(types => {
-        return `${types.join(', ')}`;
-    }));
+    .then(data => data.types.map(slot => slot.type.name ))
+    .then(types => `${types.join(', ')}` ));
 })
 
 // after all types have been fetched
